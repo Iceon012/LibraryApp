@@ -1,0 +1,51 @@
+
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 class="text-center mt-5" style="text-transform: uppercase; font-weight:700 ; color: #245166;"><i class="fa fa-user fa-3x" aria-hidden="true" ></i> <br>Library Log System</h2>
+          <hr>
+          <div class="text-center mb-5 text-dark">Sign-up Page for Librarian</div>
+          <div class="card bg-light">
+            <br><br>
+              <div class="card-body">
+                <div class="container" style="width: 35rem;">
+                  <form [formGroup]="SignupForm" (ngSubmit)="SaveUser()">
+                  <!-- <div class="text-center">
+                    <img src="assets/login.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                      width="200px" alt="profile">
+                      <i class="fa fa-user fa-5x" aria-hidden="true" ></i>
+                  </div> -->
+                  <div class="row">
+                    <div class="col-md">
+                      <div class="mb-3">
+                        <input type="text" class="form-control"  aria-describedby="emailHelp"
+                          placeholder="Employee ID" formControlName="empid">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="mb-3">
+                        <input type="text" class="form-control"  aria-describedby="emailHelp"
+                          placeholder="Name" formControlName="empname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control"  placeholder="Email" formControlName="email">
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" class="form-control"  placeholder="Password" formControlName="password">
+                  </div>
+                  <a>
+                  <div class="text-center"><a><button type="submit" class="btn btn-color px-5 mb-5 w-100" style="background-color: #245166;">
+                     Sign up</button></a>
+                  </div>
+                </a>
+              </form>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>s
+  </body>

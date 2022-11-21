@@ -1,0 +1,22 @@
+<div class="display">
+    <div class="alert alert-dark">
+        <table class="table table-striped table-hover">
+            <thead>
+                <th scope="col">Id Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of patrons">
+                    <td>{{p.idnumber}}</td>
+                    <td>{{p.Name}}</td>
+                    <td>{{p.purpose}}</td>
+                    <td>{{p.date}}</td>
+                    <td>{{p.time}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

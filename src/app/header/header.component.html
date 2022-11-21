@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>HOME</title>
+<body>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <img src="assets/tlogo.png" style="width: 200px; height: 200px;">
+        <ul>
+          <li><a routerLink="display"><i class="fa fa-home"></i> Home</a></li>
+          <li><a routerLink="category"><i class="fa fa-user"></i> Patrons</a></li>
+          <li><a routerLink="report"><i class="fa fa-file"></i> Report</a></li>
+          <li><a routerLink="libraryusers"><i class="fa fa-address-card"></i> Account</a></li>
+        </ul>
+    </div>
+    <div class="main">
+      <h2><div class="header">Library Log Information System </div></h2>
+      <div class="logout">  
+        <li><a routerLink="/login"><i class="fa fa-sign-out"></i> Log-out</a></li>
+      </div>
+      <div>
+        <app-category></app-category>
+      </div>
+    </div>
+</div>
+
+</body>
+
+
+      
+
+</html>

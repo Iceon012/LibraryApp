@@ -1,0 +1,84 @@
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md" >
+            <div class="container mt-3" style="background-color: rgba(249, 249, 249, 0.626); border-radius: 5px; " >
+                <br>
+                <h2 style="text-transform: uppercase; font-weight: 800; color: #245166;"><i class="fa fa-user" aria-hidden="true"></i> New Account</h2>
+                <form class="row g-3" [formGroup]="libraryusersForm" (ngSubmit)="SaveFunct()">
+                    <div class="col-md-12">
+                      <label for="inputEmail4" class="form-label">ID Number</label>
+                      <input type="text" class="form-control" id="inputEmail4" formControlName="idnum">
+                    </div>
+                    <div class="col-4">
+                      <label for="inputAddress" class="form-label">Lastname</label>
+                      <input type="text" class="form-control" id="inputAddress" formControlName="lastname">
+                    </div>
+                    <div class="col-4">
+                        <label for="inputAddress" class="form-label">Firstname</label>
+                        <input type="text" class="form-control" id="inputAddress" formControlName="firstname">
+                      </div>
+                      <div class="col-4">
+                        <label for="inputAddress" class="form-label">Middle</label>
+                        <input type="text" class="form-control" id="inputAddress" formControlName="middlename">
+                      </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Course</label>
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example" formControlName="course">
+                        <option value="">...</option>
+                        <option *ngFor="let titem of acourse">{{titem}}</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="inputCity" formControlName="date">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputState" class="form-label">Time</label>
+                      <input type="time" class="form-control" id="inputCity" formControlName="time">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputCity" formControlName="email">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputState" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputCity" formControlName="password">
+                      </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md">
+                                <button type="submit" class="btn form-control text-white" style="background-color: #245166; text-transform: uppercase;">Add Account</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="container mt-3" style="background-color: rgba(249, 249, 249, 0.626); border-radius: 5px; overflow-x: auto;">
+                <br>
+                <h2 style="text-transform: uppercase; font-weight: 400;">Library Users</h2>
+                <table class="table table-hover rounded">
+                  <thead>
+                    <tr>
+                      <th>ID Number</th>
+                      <th>Name</th>
+                      <th>Course</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr  *ngFor="let u of patron">
+                      <td>{{u.stud_id}}</td>
+                      <td>{{u.Name}}</td>
+                      <td>{{u.course}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+    </div>
+</div>
