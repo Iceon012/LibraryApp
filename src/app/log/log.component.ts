@@ -12,6 +12,7 @@ export class LogComponent {
 
   divshow = false;
   showpurpose = false;
+  student: any;
 
   logForm = new FormGroup({
     studID : new FormControl(null)
@@ -19,12 +20,15 @@ export class LogComponent {
 
   constructor( private route:Router, private posting: LibrarylogService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+  }
+  sample: any;
 
   StudLogin(){
     console.log(this.logForm.value)
     this.posting.StudLogin(this.logForm.value).subscribe((result:any)=>{
-      console.log(result);
+      this.sample = JSON.parse(result)
+      console.log(this.sample);
       if(result != '0'){
         console.log(alert("Successfully Login!"))
         this.showpurpose = !this.showpurpose;
@@ -32,7 +36,12 @@ export class LogComponent {
       }
       else{
         this.divshow = !this.divshow;
-        location.reload();
+        // location.reload();
+        if(this.divshow == true) {
+          setTimeout(function(){
+            window.location.reload();
+         }, 800);
+        }
       }
     });
   }

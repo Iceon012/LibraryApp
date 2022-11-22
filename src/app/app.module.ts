@@ -16,7 +16,6 @@ import { HeaderComponent } from './header/header.component';
 import { DatePipePipe } from './date-pipe.pipe';
 import { DisplayComponent } from './display/display.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { AuthorisedTopNavComponent } from './layout/authorised/authorised-top-nav/authorised-top-nav.component';
 import { StudentlogComponent } from './studentlog/studentlog.component';
 import { LogComponent } from './log/log.component';
 import { PurposeComponent } from './purpose/purpose.component';
@@ -37,7 +36,6 @@ import { NgxPrintModule } from 'ngx-print';
     DatePipePipe,
     DisplayComponent,
     SidenavComponent,
-    AuthorisedTopNavComponent,
     StudentlogComponent,
     LogComponent,
     PurposeComponent

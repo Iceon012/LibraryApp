@@ -8,10 +8,3 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
-function thisDate() {
-  document.getElementById('datePicker').value = new Date().toDateInputValue();
-}
-    // Refresh or reload page.
-    function refresh() {
-        window.location.reload();
-    }
