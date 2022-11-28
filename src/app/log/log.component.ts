@@ -15,7 +15,10 @@ export class LogComponent {
   student: any;
 
   logForm = new FormGroup({
-    studID : new FormControl(null)
+    studID : new FormControl(null),
+    timelog: new FormControl(null),
+    datelog: new FormControl(null),
+    purposelog: new FormControl(null)
   })
 
 
@@ -46,7 +49,6 @@ export class LogComponent {
   }
 
   ngOnInit(): void { 
-    console.log(this.sample.globaldata)
   }
 
 }
