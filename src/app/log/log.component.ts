@@ -18,19 +18,18 @@ export class LogComponent {
     studID : new FormControl(null)
   })
 
-  constructor( private route:Router, private posting: LibrarylogService) { }
 
-  ngOnInit(): void { 
-  }
+  constructor( private route:Router, private posting: LibrarylogService) { }
   sample: any;
+  log: any;
 
   StudLogin(){
-    console.log(this.logForm.value)
+    //console.log(this.logForm.value)
     this.posting.StudLogin(this.logForm.value).subscribe((result:any)=>{
       this.sample = JSON.parse(result)
       console.log(this.sample);
       if(result != '0'){
-        console.log(alert("Successfully Login!"))
+        //console.log(alert("Successfully Login!"))
         this.showpurpose = !this.showpurpose;
         //this.route.navigate(['/purpose']);
       }
@@ -44,6 +43,10 @@ export class LogComponent {
         }
       }
     });
+  }
+
+  ngOnInit(): void { 
+    console.log(this.sample.globaldata)
   }
 
 }

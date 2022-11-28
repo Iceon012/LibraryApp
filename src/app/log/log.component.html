@@ -26,16 +26,24 @@
                 </div>
                 <!-- <form [formGroup]="log" (ngSubmit)="StudentLog()"> -->
                 <div *ngIf="showpurpose">
+                  <!-- <div class="row">
+                    <div class="col-md">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" formControlName="id" d>
+                        <label for="floatingInput">ID</label>
+                      </div>
+                    </div>
+                  </div> -->
                   <div class="row">
                     <div class="col-md">
                       <div class="form-floating mb-3">
-                        <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="date" class="form-control" id="floatingInput" formControlName="timelog" placeholder="name@example.com">
                         <label for="floatingInput">Date Log:</label>
                       </div>
                     </div>
                     <div class="col-md">
-                      <div class="form-floating">
-                        <input type="time" class="form-control" id="floatingPassword" placeholder="Password">
+                      <div class="form-floating mb-3">
+                        <input type="time" class="form-control" id="floatingPassword" formControlName="datelog" placeholder="Password">
                         <label for="floatingPassword">Time Log:</label>
                       </div>
                     </div>
@@ -43,12 +51,12 @@
                   <div class="row">
                     <div class="col-md">
                       <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" formControlName="purposelog" id="floatingTextarea2" style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Purpose</label>
                       </div>
                     </div>
                   </div>
-                  <div class="text-center">
+                  <div class="text-center mb-3">
                     <button type="submit" class="btn btn-color px-5 mb-5 w-100" style="background-color: #245166;">
                       Login
                     </button>
