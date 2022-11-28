@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 04:09 AM
+-- Generation Time: Nov 28, 2022 at 05:39 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -60,6 +60,7 @@ INSERT INTO `lib_users` (`id_num`, `stud_id`, `lname`, `fname`, `middle`, `cours
 CREATE TABLE `logs` (
   `id_log` int(255) NOT NULL,
   `id_num` int(255) NOT NULL,
+  `logName` varchar(255) NOT NULL,
   `log_date` date NOT NULL,
   `log_time` time NOT NULL,
   `log_purpose` varchar(255) NOT NULL
@@ -118,7 +119,7 @@ ALTER TABLE `userlogin`
 -- AUTO_INCREMENT for table `lib_users`
 --
 ALTER TABLE `lib_users`
-  MODIFY `id_num` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_num` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `logs`

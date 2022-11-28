@@ -9,16 +9,14 @@ import { LibrarylogService } from '../librarylog.service';
   styleUrls: ['./log.component.css']
 })
 export class LogComponent {
+  
 
   divshow = false;
   showpurpose = false;
-  student: any;
+  showbutton = true;
 
   logForm = new FormGroup({
-    studID : new FormControl(null),
-    timelog: new FormControl(null),
-    datelog: new FormControl(null),
-    purposelog: new FormControl(null)
+    studID : new FormControl(null)
   })
 
 
@@ -29,12 +27,12 @@ export class LogComponent {
   StudLogin(){
     //console.log(this.logForm.value)
     this.posting.StudLogin(this.logForm.value).subscribe((result:any)=>{
-      this.sample = JSON.parse(result)
-      console.log(this.sample);
+      console.log(result);
       if(result != '0'){
-        //console.log(alert("Successfully Login!"))
+        localStorage.setItem("id_num",result);
+        this.route.navigate(['/purpose']);
         this.showpurpose = !this.showpurpose;
-        //this.route.navigate(['/purpose']);
+        this.showbutton = false;
       }
       else{
         this.divshow = !this.divshow;

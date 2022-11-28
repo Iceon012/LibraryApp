@@ -17,7 +17,11 @@ import { PurposeComponent } from './purpose/purpose.component';
 
 const routes: Routes = [
   {path: 'main', component: MainComponent},
-  {path: 'log', component: LogComponent},
+  {path: 'log', component: LogComponent,
+  children: [
+    {path: 'purpose', component: PurposeComponent},
+    {path: '', redirectTo: 'log', pathMatch: 'full'}
+  ]},
   {path: 'purpose', component:PurposeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},

@@ -23,6 +23,10 @@ export class LibrarylogService {
   SaveUser(lib:any){
     return this.http.post(this.url + 'user.php',JSON.stringify(lib));
   }
+
+  StudentLogs(lib:any){
+    return this.http.post(this.url + 'log.php',JSON.stringify(lib));
+  }
   
   Login(log: any) {
     return this.http.post(this.url + 'userlogin.php', JSON.stringify(log));
@@ -30,6 +34,14 @@ export class LibrarylogService {
 
   patron(){
     return this.http.get(this.url + 'display.php');
+  }
+
+  getStudent(){
+    return this.http.get(this.url + 'display.php');
+  }
+
+  StudLog(eid: any) {
+    return this.http.get(this.url + 'displayOne.php?eid=' + eid);
   }
 
   StudLogin(log: any) {
