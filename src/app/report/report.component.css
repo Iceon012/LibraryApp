@@ -1,0 +1,11 @@
+table {
+    background-color: #245166; 
+    border-radius: 5px;
+}
+thead {
+    background-color: #245166; 
+    border-radius: 5px;
+}
+tr {
+    padding: 0;
+}

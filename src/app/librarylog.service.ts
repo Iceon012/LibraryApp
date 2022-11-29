@@ -36,6 +36,10 @@ export class LibrarylogService {
     return this.http.get(this.url + 'display.php');
   }
 
+  getLogs(){
+    return this.http.get(this.url + 'displayLog.php');
+  }
+
   getStudent(){
     return this.http.get(this.url + 'display.php');
   }

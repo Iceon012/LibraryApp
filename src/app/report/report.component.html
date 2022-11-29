@@ -1,27 +1,27 @@
-<br>
-<table class="table rounded" style="border-radius: 10px;">
-    <thead class="table table-hover" style="background-color: #245166; color: white;">
+<div class="container-fluid" id="print-section">
+    <br>
+    <table class="table table-hover table-bordered align-middle mb-3 bg-white rounded">
+      <thead class="text-white">
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Log Date</th>
+          <th>Log Time</th>
+          <th>Purpose</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let u of studentLogs">
+          <td>{{u.id_num}}</td>
+          <td>{{u.logName}}</td>
+          <td>{{u.log_date}}</td>
+          <td>{{u.log_time}}</td>
+          <td>{{u.log_purpose}}</td>
         </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
-    </tbody>
-</table>
+      </tbody>
+    </table>
+    <br>
+  </div>
+  
+  <button class="btn btn-success" [useExistingCss]="true" styleSheetFile="node_modules/bootstrap/dist/css/bootstrap.min.css" printSectionId="print-section"  
+  ngxPrint>Print</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibrarylogService } from '../librarylog.service';
 
 @Component({
   selector: 'app-report',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
+  studentLogs: any;
+
+  constructor(private post : LibrarylogService) { }
 
   ngOnInit(): void {
+    this.post.getLogs().subscribe((result:any)=>{
+      console.log(result)
+      this.studentLogs = result;
+      if(result == true) {
+        this.ngOnInit()
+      }
+    });
   }
 
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 05:39 PM
+-- Generation Time: Nov 29, 2022 at 08:00 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -49,7 +49,9 @@ INSERT INTO `lib_users` (`id_num`, `stud_id`, `lname`, `fname`, `middle`, `cours
 (2, 4558, 'Dela Cruz', 'Juan', 'S', 'BSIT', '2022-04-12', '15:52:00', 'a.ayson12345@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (3, 4882, 'xzczC', 'Auson', 'dsdsa', 'BSBA', '2022-11-22', '10:38:00', 'dsadsa', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (4, 1520, 'Mamato', 'Ollem', 'B', 'BSIT', '2022-11-22', '13:39:00', 'sample@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
-(5, 5396, 'Castaño', 'Rianne', 'B', 'BSIT', '2022-11-22', '15:03:00', 'rianne@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+(5, 5396, 'Castaño', 'Rianne', 'B', 'BSIT', '2022-11-22', '15:03:00', 'rianne@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(9, 5258, 'Ayson', 'Arold', 'S', 'BSIT', '2022-11-29', '13:07:00', 'arold@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(10, 4384, 'Rivera', 'Rolando', 'B', 'BSIT', '2022-11-29', '13:45:00', 'rolando@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
 
@@ -65,6 +67,18 @@ CREATE TABLE `logs` (
   `log_time` time NOT NULL,
   `log_purpose` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`id_log`, `id_num`, `logName`, `log_date`, `log_time`, `log_purpose`) VALUES
+(1, 4761, 'Ayson, Arvin S.', '2022-11-29', '07:56:00', 'Study'),
+(2, 1520, 'Mamato, Ollem B.', '2022-11-29', '10:47:00', 'Tambay'),
+(3, 5396, 'Castaño, Rianne B.', '2022-11-29', '10:52:00', 'Tambay'),
+(4, 5258, 'Ayson, Arold S.', '2022-11-29', '13:08:00', 'Tambay'),
+(5, 4761, 'Ayson, Arvin S.', '2022-11-29', '13:42:00', 'Tambay'),
+(6, 4384, 'Rivera, Rolando B.', '2022-11-23', '16:41:00', 'Study');
 
 -- --------------------------------------------------------
 
@@ -87,7 +101,8 @@ CREATE TABLE `userlogin` (
 INSERT INTO `userlogin` (`id_num`, `emp_num`, `name`, `email`, `password`) VALUES
 (1, 4761, 'Arvin', '123@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (2, 4886, 'Ariel Ayson', 'ariel@gmail.com', '51eac6b471a284d3341d8c0c63d0f1a286262a18'),
-(3, 4855, 'Arvin', 'a.ayson12345@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+(3, 4855, 'Arvin', 'a.ayson12345@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(4, 8888, 'Arvin', 'arvin@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 --
 -- Indexes for dumped tables
@@ -119,19 +134,19 @@ ALTER TABLE `userlogin`
 -- AUTO_INCREMENT for table `lib_users`
 --
 ALTER TABLE `lib_users`
-  MODIFY `id_num` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_num` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id_log` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_log` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `userlogin`
 --
 ALTER TABLE `userlogin`
-  MODIFY `id_num` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_num` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
