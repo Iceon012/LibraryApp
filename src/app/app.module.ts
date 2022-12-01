@@ -20,6 +20,7 @@ import { StudentlogComponent } from './studentlog/studentlog.component';
 import { LogComponent } from './log/log.component';
 import { PurposeComponent } from './purpose/purpose.component';
 import { NgxPrintModule } from 'ngx-print';
+import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NgxPrintModule } from 'ngx-print';
     SidenavComponent,
     StudentlogComponent,
     LogComponent,
-    PurposeComponent
+    PurposeComponent,
+    ViewstudentsComponent
   ],
   imports: [
     BrowserModule,

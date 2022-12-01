@@ -14,6 +14,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { StudentlogComponent } from './studentlog/studentlog.component';
 import { LogComponent } from './log/log.component';
 import { PurposeComponent } from './purpose/purpose.component';
+import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
 
 const routes: Routes = [
   {path: 'main', component: MainComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path: 'libraryusers', component: LibraryusersComponent},
     {path: 'category', component: CategoryComponent},
     {path: 'account', component: AccountComponent},
+    {path: 'viewstudents/:eid', component: ViewstudentsComponent},
     {path: '', redirectTo: 'account', pathMatch: 'full'}
   ]},
   {path: 'header', component: HeaderComponent},
