@@ -17,21 +17,28 @@ body {
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 45px;
+  align-items: center;
   text-decoration: none;
   font-size: 25px;
   color: #f1f1f1;
   display: block;
   transition: 0.3s;
+  
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
+.sidebar #ahover:hover {
+  color: #245166;
+  background-color: #f1f1f1;
+}
+
+a .navbar-brand {
+  align-items: center;
 }
 
 .sidebar .closebtn {
   position: absolute;
-  top: 0;
+  top: 0.5rem;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;

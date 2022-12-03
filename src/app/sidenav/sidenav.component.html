@@ -4,23 +4,35 @@
 <div id="mySidebar" class="sidebar">
   <!-- <button class="openbtn rounded" onclick="closeNav()" style="background-color: #245166;">x</button>   -->
   <div class="container">
+    <a class="text-left closebtn" style="margin-top: 0;" onclick="closeNav()">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+    </a>
+    <br>
     <a class="navbar-brand" href="#">
-      <img src="assets/tlogo.png" alt="Bootstrap" width="150" height="150">
+      <div class="d-inline-flex position-relative">
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+          <span class="visually-hidden">New alerts</span>
+        </span>
+        <img class="rounded-circle shadow-4 responsive" src="https://mdbootstrap.com/img/Photos/Avatars/man2.jpg" alt="Avatar" style="width: 150px; height: 150px;">
+      </div>
     </a>
   </div>
-  <a onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-  <a routerLink="category"><i class="fa fa-users" aria-hidden="true"></i> Patron</a>
-  <a routerLink="report"><i class="fa fa-flag" aria-hidden="true"></i> Report</a>
-  <a routerLink="account"><i class="fa fa-id-card" aria-hidden="true"></i> Account</a>
-  <a routerLink="/login"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+  <a id="ahover" ><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  <a id="ahover" routerLink="category"><i class="fa fa-users" aria-hidden="true"></i> Patron</a>
+  <a id="ahover" routerLink="report"><i class="fa fa-flag" aria-hidden="true"></i> Report</a>
+  <a id="ahover" routerLink="account"><i class="fa fa-id-card" aria-hidden="true"></i> Account</a>
+  <a id="ahover" routerLink="/login"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
 </div>
 
 <div id="main">
   <div class="row">
     <div class="col-md">
-      <button class="openbtn rounded" onclick="openNav()" style="background-color: #245166;"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <button class="openbtn rounded" onclick="openNav()" style="background-color: #245166;"><i class="fa fa-bars" aria-hidden="true"></i></button>
       <a onclick="closeNav()" style="font-size: 25px; text-transform: uppercase; font-weight: 600; color: #245166;"> Library log Information System</a>  
     </div>
+    <!-- <div class="col-md d-inline-flex">
+      <button class="btn btn-secondary openbtn rounded"><i class="bi bi-pencil"></i></button>
+    </div> -->
   </div>
   <div class="row">
     <div class="col-md">
@@ -29,36 +41,5 @@
       </div>
     </div>
   </div>
-  <!-- <nav class="navbar navbar-expand-sm rounded" style="background-color:#245166 ;">
-    <div class="container-fluid">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button class="openbtn rounded btn-sm" onclick="openNav()">☰</button> 
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
 </div>
-
-<!-- <script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script> -->
-   
 </body>

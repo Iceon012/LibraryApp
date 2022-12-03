@@ -62,7 +62,8 @@
             <div class="container mt-3" style="background-color: rgba(249, 249, 249, 0.626); border-radius: 5px; overflow-x: auto;">
                 <br>
                 <h2 style="text-transform: uppercase; font-weight: 400;">Library Users</h2>
-                <table class="table table-hover rounded">
+                <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" />
+                <table class="table table-hover rounded" id="myTable">
                   <thead>
                     <tr>
                       <th>ID Number</th>
@@ -71,7 +72,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr  *ngFor="let u of patron">
+                    <tr *ngFor="let u of patron">
                       <td>{{u.stud_id}}</td>
                       <td>{{u.Name}}</td>
                       <td>{{u.course}}</td>

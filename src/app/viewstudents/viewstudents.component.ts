@@ -13,7 +13,9 @@ export class ViewstudentsComponent {
   updateStud = new FormGroup({
     ID: new FormControl(null),
     Name: new FormControl(null),
-   Course: new FormControl(null),
+    Course: new FormControl(null),
+    Birthdate: new FormControl(null),
+    email: new FormControl(null)
   })
 
   constructor(private activeroute: ActivatedRoute,
@@ -35,6 +37,8 @@ export class ViewstudentsComponent {
       this.updateStud.controls['ID'].setValue(this.studid[0].stud_id);
       this.updateStud.controls['Name'].setValue(this.studid[0].Name);
       this.updateStud.controls['Course'].setValue(this.studid[0].course);
+      this.updateStud.controls['Birthdate'].setValue(this.studid[0].bdate);
+      this.updateStud.controls['email'].setValue(this.studid[0].email);
     })
 
     

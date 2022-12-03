@@ -1,12 +1,22 @@
-<div class="container-fluid" id="print-section">
+<div class="container-fluid">
   <br>
   <div class="row">
     <div class="col-md">
       <h1>STUDENT DATA</h1>
     </div>
   </div>
-  <div class="table-responsive">
-    <table class="table table-hover table-bordered bg-white rounded responsive">
+  <div class="row">
+    <div class="col-md">
+      <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search Data.." title="Type in a name" />
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-outline-success form-control" [useExistingCss]="true" styleSheetFile="node_modules/bootstrap/dist/css/bootstrap.min.css" printSectionId="print-section"  
+    ngxPrint><i class="fa fa-print" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="table-responsive"  id="print-section">
+    <br>
+    <table class="table table-hover table-bordered bg-white rounded responsive" id="myTable" >
       <thead class="text-white">
         <tr>
           <th>Student ID</th>
@@ -28,7 +38,4 @@
         </tr>
       </tbody>
     </table>
-    <br>
-    <button class="btn btn-success" [useExistingCss]="true" styleSheetFile="node_modules/bootstrap/dist/css/bootstrap.min.css" printSectionId="print-section"  
-ngxPrint>Print</button>
   </div>

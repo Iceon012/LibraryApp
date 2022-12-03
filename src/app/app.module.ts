@@ -10,7 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
 import { HeaderComponent } from './header/header.component';
 import { DatePipePipe } from './date-pipe.pipe';
@@ -21,6 +21,8 @@ import { LogComponent } from './log/log.component';
 import { PurposeComponent } from './purpose/purpose.component';
 import { NgxPrintModule } from 'ngx-print';
 import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+//import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,10 @@ import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPrintModule
+    NgxPrintModule,
+    FormsModule,
+    MatDatepickerModule
+    //NgxDaterangepickerMd.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

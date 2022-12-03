@@ -1,6 +1,11 @@
+<br>
+<div class="container-fluid">
+  <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for ID Numbers.." title="Type in a name" />
+
+</div>
 <div class="container-fluid" id="print-section">
     <br>
-    <table class="table table-hover table-bordered align-middle mb-3 bg-white rounded">
+    <table class="table table-hover table-bordered align-middle mb-3 bg-white rounded" id="myTable">
       <thead class="text-white">
         <tr>
           <th>Student ID</th>
@@ -21,6 +26,12 @@
       </tbody>
     </table>
     <br>
+  </div>
+
+  <br><br>
+
+  <div class="row">
+    <app-home></app-home>
   </div>
   
   <button class="btn btn-success" [useExistingCss]="true" styleSheetFile="node_modules/bootstrap/dist/css/bootstrap.min.css" printSectionId="print-section"  

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { CategoryComponent } from './category/category.component';
-import { DisplayComponent } from './display/display.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LibraryusersComponent } from './libraryusers/libraryusers.component';
